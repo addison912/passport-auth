@@ -232,3 +232,63 @@ a {
   margin: 12px;
   border-radius: 4px;
 }
+
+@media screen and (max-width: 992px) {
+  .home,
+  .login {
+    padding: 24px;
+  }
+
+  .card {
+    width: 100%;
+    margin-bottom: 50px;
+  }
+
+  .wrapper {
+    width: 90%;
+    height: 90%;
+    flex-direction: column;
+    margin-top: 36px;
+  }
+
+  .loginTitle {
+    display: none;
+  }
+
+  .loginInputs {
+    flex-direction: column-reverse;
+  }
+
+  .center {
+    width: 100%;
+    position: relative;
+    flex-direction: row;
+  }
+
+  .left {
+    padding: 20px;
+    flex-direction: row;
+  }
+
+  .right {
+    padding: 12px;
+    width: 100%;
+  }
+
+  .right input {
+    width: 240px;
+    height: 32px;
+    padding: 0 8px;
+    margin: 8px;
+  }
+  .centerline {
+    min-height: 0;
+    height: 0.5px;
+    width: 300px;
+    margin: 0 12px;
+  }
+
+  .socialLoginButton {
+    margin: 0 24px;
+  }
+}

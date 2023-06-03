@@ -2,6 +2,7 @@ import { FunctionComponent } from "react";
 import Google from "../assets/Google.png";
 import Github from "../assets/Github.png";
 import Facebook from "../assets/Facebook.png";
+import { Link } from "react-router-dom";
 
 const Login: FunctionComponent = () => {
   return (
@@ -10,15 +11,24 @@ const Login: FunctionComponent = () => {
         <h1 className="loginTitle">Login</h1>
         <div className="loginInputs">
           <div className="left">
-            <div className="socialLoginButton">
+            <Link
+              to={"http://localhost:5000/auth/google"}
+              className="socialLoginButton"
+            >
               <img src={Google} alt="Google" className="icon" />
-            </div>
-            <div className="socialLoginButton">
+            </Link>
+            <Link
+              to={"http://localhost:5000/auth/github"}
+              className="socialLoginButton"
+            >
               <img src={Github} alt="Github" className="icon" />
-            </div>
-            <div className="socialLoginButton">
+            </Link>
+            <Link
+              to={"http://localhost:5000/auth/facebook"}
+              className="socialLoginButton"
+            >
               <img src={Facebook} alt="Facebook" className="icon" />
-            </div>
+            </Link>
           </div>
           <center className="center">
             <div className="centerline" />

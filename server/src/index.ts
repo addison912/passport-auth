@@ -3,8 +3,8 @@ import express from "express";
 import cors from "cors";
 import dotenv from "dotenv";
 import passport from "passport";
-// import passportSetup from "./passport";
-// import authRoute from "./routes/auth";
+import "./passport";
+import authRoute from "./routes/auth";
 
 const app = express();
 dotenv.config();
@@ -22,13 +22,13 @@ app.use(passport.session());
 
 app.use(
   cors({
-    origin: process.env.ORIGIN,
+    origin: process.env.CLIENT_URL,
     methods: "GET,POST,PUT,DELETE",
     credentials: true,
   })
 );
 
-// app.use("/auth", authRoute);
+app.use("/auth", authRoute);
 
 app.listen(process.env.PORT, () => {
   console.log("Server is running!");
